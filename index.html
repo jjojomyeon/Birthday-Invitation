@@ -1,29 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitation Home</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amelia Isobel's Fairy 1st Birthday & Baptism</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fairy: {
+                            50: '#FFF8FA',
+                            100: '#FFEBF2',
+                            200: '#FFD6E5',
+                            300: '#FFB3D1',
+                            400: '#FF75AA',
+                            500: '#E05388',
+                            gold: '#D4AF37',
+                            sage: '#E2EBD8',
+                            purple: '#A882DD',
+                            dark: '#4A3B40'
+                        }
+                    },
+                    fontFamily: {
+                        cursive: ['"Alex Brush"', 'cursive'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-  <nav>
-  <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
-  <ul id="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="details.html">Event Details</a></li>
-    <li><a href="rsvp.html">RSVP</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-  </ul>
-</nav>
-  <header>
-    <h1>You're Invited!</h1>
-    <p>Join us for a joyful Birthday & Christening celebration</p>
-  </header>
-<script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-  }
-</script>
+<body class="bg-fairy-50 text-fairy-dark font-sans min-h-screen relative overflow-x-hidden">
+
+    <!-- Flying Fairies & Butterflies Overlay Layer -->
+    <div id="fairy-flight-container" class="fixed inset-0 pointer-events-none z-20 overflow-hidden">
+        <!-- Fairy 1 (Top Left Flying) -->
+        <div class="flying-fairy fairy-1">
+            <svg class="w-12 h-12 text-fairy-300 opacity-80" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L13.5 8L19 6L15 11L21 14L14.5 15L16 21L11.5 16.5L8 20L8.5 14.5L3 13L8 10L5 5L10.5 7.5L12 2Z"/>
+            </svg>
+        </div>
+        <!-- Fairy 2 (Top Right Flying) -->
+        <div class="flying-fairy fairy-2">
+            <svg class="w-10 h-10 text-fairy-purple opacity-70" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L13.5 8L19 6L15 11L21 14L14.5 15L16 21L11.5 16.5L8 20L8.5 14.5L3 13L8 10L5 5L10.5 7.5L12 2Z"/>
+            </svg>
+        </div>
+        <!-- Floating Butterflies -->
+        <div class="butterfly b-1">🦋</div>
+        <div class="butterfly b-2">🦋</div>
+        <div class="butterfly b-3">✨</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card px-4 py-3 shadow-sm border-b border-fairy-200/50">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="#hero" class="font-cursive text-2xl md:text-3xl text-fairy-500 font-bold">Amelia Isobel</a>
+            <div class="hidden sm:flex space-x-6 text-sm font-medium text-fairy-dark">
+                <a href="#details" class="hover:text-fairy-400 transition-colors">Details</a>
+                <a href="#location" class="hover:text-fairy-400 transition-colors">Guide</a>
+                <a href="#dresscode" class="hover:text-fairy-400 transition-colors">Dress Code</a>
+                <a href="#gifts" class="hover:text-fairy-400 transition-colors">Gift Ideas</a>
+                <a href="#health" class="hover:text-fairy-400 transition-colors">Health Protocols</a>
+            </div>
+            <a href="#rsvp" class="px-4 py-1.5 bg-fairy-300 text-white rounded-full text-xs font-semibold shadow hover:bg-fairy-400 transition-colors">
+                RSVP
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-28 pb-16 md:pt-36 md:pb-24 flex flex-col items-center justify-center text-center px-4 z-10 min-h-screen">
+        <div class="max-w-3xl mx-auto space-y-6">
+            
+            <div class="inline-block p-1 bg-gradient-to-b from-fairy-300 via-fairy-100 to-fairy-300 rounded-t-full shadow-xl">
+                <div class="bg-white/90 rounded-t-full px-8 py-12 md:px-16 md:py-16 backdrop-blur-sm border border-fairy-200 flex flex-col items-center">
+                    
+                    <div class="flex items-center space-x-2 text-fairy-gold font-serif text-xs md:text-sm tracking-widest uppercase mb-2">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-fairy-400"></i>
+                        <span>OUR LITTLE FAIRY IS TURNING ONE</span>
+                        <i data-lucide="sparkles" class="w-4 h-4 text-fairy-400"></i>
+                    </div>
+
+                    <p class="text-xs uppercase tracking-widest text-fairy-dark/70 my-2">Please join us for the</p>
+                    
+                    <h2 class="font-cursive text-4xl sm:text-6xl md:text-7xl text-fairy-500 my-1 leading-tight">
+                        Baptism & 1st Birthday
+                    </h2>
+                    
+                    <p class="text-xs uppercase tracking-widest text-fairy-dark/80 mt-1">OF OUR DAUGHTER</p>
+
+                    <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl text-fairy-dark font-bold my-3 tracking-wide">
+                        AMELIA ISOBEL
+                    </h1>
+
+                    <div class="flex items-center justify-center space-x-3 w-full my-4">
+                        <div class="h-px bg-fairy-gold/40 flex-1"></div>
+                        <i data-lucide="cross" class="w-4 h-4 text-fairy-gold"></i>
+                        <span class="text-xl">🌸</span>
+                        <i data-lucide="cross" class="w-4 h-4 text-fairy-gold"></i>
+                        <div class="h-px bg-fairy-gold/40 flex-1"></div>
+                    </div>
+
+                    <!-- Photo Holder -->
+                    <div class="relative my-4 w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=400" alt="Amelia Isobel" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Date Badge -->
+                    <div class="mt-4 bg-fairy-100/90 border border-fairy-200 rounded-2xl px-6 py-3 shadow-inner">
+                        <p class="font-serif text-xl md:text-2xl font-bold text-fairy-dark tracking-wide">
+                            AUGUST 22, 2026 • SATURDAY
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Location Guide Section -->
+    <section id="location" class="py-16 px-4 max-w-4xl mx-auto relative z-10">
+        <div class="text-center mb-10">
+            <h2 class="font-cursive text-4xl md:text-5xl text-fairy-500">Location Guide</h2>
+            <div class="w-16 h-0.5 bg-fairy-300 mx-auto mt-2 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Ceremony -->
+            <div class="glass-card rounded-3xl p-6 shadow-md border border-fairy-200 text-center">
+                <div class="w-12 h-12 bg-fairy-100 rounded-full flex items-center justify-center mx-auto mb-3 text-fairy-500">
+                    <i data-lucide="church" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-fairy-dark mb-1">Ceremony</h3>
+                <p class="font-semibold text-fairy-500 text-sm mb-3">Saint Anthony de Padua Parish Church</p>
+                <p class="text-xs text-gray-600 mb-4">San Mateo Highway, Quezon City</p>
+                <span class="inline-block bg-fairy-200/60 text-fairy-dark text-xs font-semibold px-4 py-1.5 rounded-full">
+                    🕒 11:00 AM
+                </span>
+            </div>
+
+            <!-- Reception -->
+            <div class="glass-card rounded-3xl p-6 shadow-md border border-fairy-200 text-center">
+                <div class="w-12 h-12 bg-fairy-100 rounded-full flex items-center justify-center mx-auto mb-3 text-fairy-500">
+                    <i data-lucide="utensils" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-fairy-dark mb-1">Venue</h3>
+                <p class="font-semibold text-fairy-500 text-sm mb-3">Hiraya's Place & Resort</p>
+                <p class="text-xs text-gray-600 mb-4">123 Senatorial Road, Quezon City</p>
+                <span class="inline-block bg-fairy-200/60 text-fairy-dark text-xs font-semibold px-4 py-1.5 rounded-full">
+                    🕒 1:00 PM
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code Section -->
+    <section id="dresscode" class="py-12 px-4 max-w-3xl mx-auto relative z-10 text-center">
+        <div class="glass-card rounded-3xl p-8 border border-fairy-200 shadow-sm">
+            <h2 class="font-cursive text-4xl text-fairy-500 mb-2">Dress Code</h2>
+            <p class="text-xs uppercase tracking-wider text-gray-600 mb-6">
+                You may wear any comfortable casual outfit based on the color scheme provided.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-6 mb-6">
+                <div class="p-4 rounded-2xl bg-white/70 border border-fairy-100">
+                    <span class="block text-xs font-bold text-fairy-dark mb-2">WHITE</span>
+                    <span class="text-xs text-fairy-500 font-medium">Ninang & Ninong</span>
+                    <div class="flex justify-center mt-2">
+                        <span class="w-8 h-8 rounded-full bg-white border-2 border-gray-200 shadow-sm"></span>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-white/70 border border-fairy-100">
+                    <span class="block text-xs font-bold text-fairy-dark mb-2">PASTEL COLORS</span>
+                    <span class="text-xs text-fairy-500 font-medium">Guests</span>
+                    <div class="flex justify-center gap-2 mt-2">
+                        <span class="w-6 h-6 rounded-full bg-[#EBF4FF]" title="Pastel Blue"></span>
+                        <span class="w-6 h-6 rounded-full bg-[#FFEBF2]" title="Pastel Pink"></span>
+                        <span class="w-6 h-6 rounded-full bg-[#FFF9E6]" title="Pastel Yellow"></span>
+                        <span class="w-6 h-6 rounded-full bg-[#E2EBD8]" title="Pastel Sage"></span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-xs italic text-gray-500">
+                Help us bring this celebration to life by wearing shades from our chosen color palette.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gift Ideas Section -->
+    <section id="gifts" class="py-12 px-4 max-w-3xl mx-auto relative z-10 text-center">
+        <div class="glass-card rounded-3xl p-8 border border-fairy-200 shadow-sm">
+            <h2 class="font-cursive text-4xl text-fairy-500 mb-2">Gift Ideas</h2>
+            <p class="text-xs text-gray-600 leading-relaxed max-w-lg mx-auto mb-6">
+                Your presence is the greatest gift of all. If you'd like to bless our little wildflower, here are a few thoughtful ideas:
+            </p>
+
+            <div class="max-w-md mx-auto space-y-2 text-xs font-semibold text-fairy-dark bg-fairy-50 p-6 rounded-2xl border border-fairy-200">
+                <p class="text-fairy-500 uppercase tracking-widest text-[11px] mb-3">Wish Upon A Wildflower</p>
+                <p>📖 Books to treasure</p>
+                <p>🧸 Toys to inspire</p>
+                <p>👗 Outfits to grow into</p>
+                <p>👟 Tiny Steps (Shoes)</p>
+                <p>🌱 Seeds for her future (Cash Gifts)</p>
+            </div>
+
+            <p class="text-[11px] text-gray-500 italic mt-6 max-w-md mx-auto">
+                Like fairy dust, your love, prayers, and presence bring the greatest magic to our celebration.
+            </p>
+        </div>
+    </section>
+
+    <!-- Health Protocols Section -->
+    <section id="health" class="py-12 px-4 max-w-3xl mx-auto relative z-10 text-center">
+        <div class="glass-card rounded-3xl p-8 border border-fairy-200 shadow-sm">
+            <h2 class="font-cursive text-4xl text-fairy-500 mb-2">Health Protocols</h2>
+            <p class="text-xs text-gray-600 max-w-md mx-auto mb-6">
+                We kindly ask for your love and cooperation in following health protocols to protect our little one's growing immune system.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-medium text-fairy-dark">
+                <div class="p-3 bg-white/80 rounded-xl border border-fairy-100 flex flex-col items-center">
+                    <span class="text-xl mb-1">🚫👶</span>
+                    <span>Avoid kissing Isobel</span>
+                </div>
+                <div class="p-3 bg-white/80 rounded-xl border border-fairy-100 flex flex-col items-center">
+                    <span class="text-xl mb-1">🧴</span>
+                    <span>Sanitize hands before touching</span>
+                </div>
+                <div class="p-3 bg-white/80 rounded-xl border border-fairy-100 flex flex-col items-center">
+                    <span class="text-xl mb-1">🚭</span>
+                    <span>Strictly no smoking or vaping</span>
+                </div>
+                <div class="p-3 bg-white/80 rounded-xl border border-fairy-100 flex flex-col items-center">
+                    <span class="text-xl mb-1">😷</span>
+                    <span>Wear mask if unwell</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center border-t border-fairy-200/60 bg-white/50 relative z-10">
+        <h3 class="font-cursive text-3xl text-fairy-500">Amelia Isobel</h3>
+        <p class="text-xs text-gray-500 mt-1">August 22, 2026 • Quezon City</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
