@@ -1,105 +1,78 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background: linear-gradient(to bottom, #FFD1DC, #AEC6CF, #FFFACD);
-  color: #333;
+/* Custom Fairy Animations */
+.glass-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 214, 229, 0.6);
 }
 
-/* Navigation bar */
-nav {
-  background: white;
-  padding: 1rem;
-  text-align: center;
+/* Flying Fairies Animation */
+.flying-fairy {
+    position: absolute;
+    pointer-events: none;
+    filter: drop-shadow(0 0 6px rgba(255, 179, 209, 0.8));
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.fairy-1 {
+    top: 15%;
+    left: -10%;
+    animation: flyHorizontal 16s infinite ease-in-out;
 }
 
-nav li {
-  display: inline-block;
-  margin: 0 0.5rem;
+.fairy-2 {
+    top: 55%;
+    right: -10%;
+    animation: flyHorizontalReverse 20s infinite ease-in-out;
 }
 
-nav a {
-  text-decoration: none;
-  background: #FFD1DC; /* pastel pink */
-  color: #333;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
+@keyframes flyHorizontal {
+    0% {
+        transform: translateX(0vw) translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateX(110vw) translateY(-40px) rotate(15deg);
+    }
+    100% {
+        transform: translateX(0vw) translateY(0px) rotate(0deg);
+    }
 }
 
-nav a:hover {
-  background: #AEC6CF; /* pastel blue */
-  transform: scale(1.05);
+@keyframes flyHorizontalReverse {
+    0% {
+        transform: translateX(0vw) translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-110vw) translateY(50px) rotate(-15deg);
+    }
+    100% {
+        transform: translateX(0vw) translateY(0px) rotate(0deg);
+    }
 }
 
-/* Header */
-header {
-  text-align: center;
-  padding: 2rem;
+/* Floating Butterflies & Sparkles */
+.butterfly {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: floatUp 10s infinite linear;
+    opacity: 0.8;
 }
 
-h1 {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 2.5rem;
+.b-1 { left: 10%; animation-delay: 0s; }
+.b-2 { left: 80%; animation-delay: 4s; }
+.b-3 { left: 45%; animation-delay: 2s; }
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(105vh) scale(0.8) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 0.9; }
+    80% { opacity: 0.9; }
+    100% {
+        transform: translateY(-10vh) scale(1.2) rotate(360deg);
+        opacity: 0;
+    }
 }
 
-/* Sections */
-.details, .rsvp, .gallery {
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.rsvp {
-  background: white;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  border-radius: 10px;
-  max-width: 400px;
-}
-
-input, button {
-  width: 100%;
-  padding: 0.8rem;
-  margin: 0.5rem 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  background: #AEC6CF;
-  color: #333;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Gallery grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.grid img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  nav li {
-    display: block;
-    margin: 0.5rem 0;
-  }
-  nav a {
-    display: block;
-  }
-  h1 {
-    font-size: 2rem;
-  }
+html {
+    scroll-behavior: smooth;
 }
